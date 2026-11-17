@@ -389,6 +389,49 @@ button {
   animation: pulseBeacon 2s infinite ease-out;
 }
 
+/* Header Action Group & Language Selector */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-selector {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+.lang-btn {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding: 0.28rem 0.55rem;
+  border-radius: 3px;
+  transition: all var(--transition-fast);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lang-btn.is-active {
+  color: var(--accent-lime);
+  background: rgba(197, 255, 61, 0.12);
+  border-color: rgba(197, 255, 61, 0.35);
+}
+
 /* Mobile Nav Toggle */
 .mobile-nav-toggle {
   display: none;

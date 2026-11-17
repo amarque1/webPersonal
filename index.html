@@ -31,7 +31,7 @@
 <body>
 
   <!-- Skip Navigation for Accessibility -->
-  <a href="#main-content" class="skip-to-content">SKIP TO CONTENT [TAB]</a>
+  <a href="#main-content" class="skip-to-content" data-i18n="nav.skip">SKIP TO CONTENT [TAB]</a>
 
   <!-- Page Intro Loader -->
   <div class="page-loader" aria-hidden="true">
@@ -62,40 +62,55 @@
       <!-- Desktop Nav -->
       <nav class="nav-wrapper" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Status Pill Indicator -->
-      <div class="status-pill" title="Currently considering new career opportunities">
-        <span class="status-dot"></span>
-        <span>OPEN TO OPPORTUNITIES</span>
-      </div>
+      <!-- Header Actions: Language Selector + Status Pill + Mobile Toggle -->
+      <div class="header-actions">
+        <!-- Language Selector -->
+        <div class="lang-selector" role="group" aria-label="Language selection">
+          <button type="button" class="lang-btn" data-lang="ca" aria-label="Català">CA</button>
+          <button type="button" class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+          <button type="button" class="lang-btn is-active" data-lang="en" aria-label="English">EN</button>
+        </div>
 
-      <!-- Mobile Hamburger Button -->
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        <!-- Status Pill Indicator -->
+        <div class="status-pill header-status-pill" title="Currently considering new career opportunities">
+          <span class="status-dot"></span>
+          <span data-i18n="nav.status">OPEN TO OPPORTUNITIES</span>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <!-- Mobile Drawer -->
   <div id="mobile-nav-drawer" class="mobile-drawer" aria-hidden="true">
     <ul class="mobile-menu">
-      <li><a href="#about" class="mobile-nav-link">About</a></li>
-      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
-      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      <li><a href="#about" class="mobile-nav-link" data-i18n="nav.about">About</a></li>
+      <li><a href="#skills" class="mobile-nav-link" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="mobile-drawer-footer">
+      <div class="lang-selector" role="group" aria-label="Mobile language selection" style="margin-bottom:1.25rem;">
+        <button type="button" class="lang-btn" data-lang="ca" aria-label="Català">CA</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+        <button type="button" class="lang-btn is-active" data-lang="en" aria-label="English">EN</button>
+      </div>
       <div class="status-pill">
         <span class="status-dot"></span>
-        <span>OPEN TO OPPORTUNITIES</span>
+        <span data-i18n="nav.status">OPEN TO OPPORTUNITIES</span>
       </div>
     </div>
   </div>
@@ -116,38 +131,38 @@
         <!-- Identity Metadata Tag -->
         <div class="hero-meta-bar reveal-on-scroll">
           <div class="hero-identity-tag">
-            <span>GAME DEVELOPER</span>
+            <span data-i18n="hero.identityDev">GAME DEVELOPER</span>
             <span style="opacity:0.4;">/</span>
-            <span>DIGITAL ARTIST</span>
+            <span data-i18n="hero.identityArt">DIGITAL ARTIST</span>
           </div>
           <div class="status-pill">
             <span class="status-dot"></span>
-            <span>OPEN TO OPPORTUNITIES</span>
+            <span data-i18n="hero.status">OPEN TO OPPORTUNITIES</span>
           </div>
         </div>
 
         <!-- Expressive Headline -->
         <h1 class="hero-headline reveal-on-scroll reveal-stagger-1">
-          <span class="headline-line text-gradient">BUILDING WORLDS.</span>
-          <span class="headline-line text-outline">CRAFTING EXPERIENCES.</span>
+          <span class="headline-line text-gradient" data-i18n="hero.headlineLine1">BUILDING WORLDS.</span>
+          <span class="headline-line text-outline" data-i18n="hero.headlineLine2">CRAFTING EXPERIENCES.</span>
         </h1>
 
         <!-- Concise Introduction -->
-        <p class="hero-bio reveal-on-scroll reveal-stagger-2">
+        <p class="hero-bio reveal-on-scroll reveal-stagger-2" data-i18n="hero.bio" data-i18n-html>
           Bridging <strong>gameplay programming</strong>, <strong>physics simulation</strong>, and <strong>3D visual direction</strong>. Developing responsive gameplay mechanics in Unity &amp; C# while authoring atmospheric 3D environments, shaders, and digital art.
         </p>
 
         <!-- Call to Actions -->
         <div class="hero-cta-group reveal-on-scroll reveal-stagger-3">
           <a href="#projects" class="btn btn--primary">
-            <span>EXPLORE MY WORK</span>
+            <span data-i18n="hero.ctaWork">EXPLORE MY WORK</span>
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
           <a href="#contact" class="btn btn--secondary">
-            <span>CONTACT ME</span>
+            <span data-i18n="hero.ctaContact">CONTACT ME</span>
           </a>
           <a href="./assets/cv/cv-placeholder.pdf" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -156,26 +171,26 @@
               <line x1="16" y1="13" x2="8" y2="13"></line>
               <line x1="16" y1="17" x2="8" y2="17"></line>
             </svg>
-            <span>RESUME / CV</span>
+            <span data-i18n="hero.ctaCv">RESUME / CV</span>
           </a>
         </div>
 
         <!-- Live Telemetry HUD Bar -->
         <div class="hero-hud reveal-on-scroll reveal-stagger-3" aria-label="System Telemetry">
           <div class="hud-item">
-            <span class="hud-label">STATUS:</span>
-            <span class="hud-value hud-value--accent">OPERATIONAL // ENGINE ACTIVE</span>
+            <span class="hud-label" data-i18n="hero.hudStatusLabel">STATUS:</span>
+            <span class="hud-value hud-value--accent" data-i18n="hero.hudStatusValue">OPERATIONAL // ENGINE ACTIVE</span>
           </div>
           <div class="hud-item">
-            <span class="hud-label">COORDS:</span>
+            <span class="hud-label" data-i18n="hero.hudCoordsLabel">COORDS:</span>
             <span class="hud-value hud-value-coords">37.7749° N, 122.4194° W</span>
           </div>
           <div class="hud-item">
-            <span class="hud-label">SYS_TIME:</span>
+            <span class="hud-label" data-i18n="hero.hudTimeLabel">SYS_TIME:</span>
             <span class="hud-value hud-value-time">--:--:-- UTC</span>
           </div>
           <div class="hud-item">
-            <span class="hud-label">REFRESH:</span>
+            <span class="hud-label" data-i18n="hero.hudRefreshLabel">REFRESH:</span>
             <span class="hud-value hud-value-fps">60 FPS</span>
           </div>
         </div>
@@ -186,7 +201,7 @@
         <div class="scroll-mouse" aria-hidden="true">
           <div class="scroll-wheel"></div>
         </div>
-        <span>SCROLL</span>
+        <span data-i18n="hero.scroll">SCROLL</span>
       </a>
     </section>
 
@@ -197,9 +212,9 @@
       <div class="container">
         <!-- Section Header -->
         <header class="section-header reveal-on-scroll">
-          <div class="section-eyebrow">02. DUAL PROFILE</div>
-          <h2 class="section-title">THE HYBRID MINDSET</h2>
-          <p class="section-subtitle">
+          <div class="section-eyebrow" data-i18n="about.eyebrow">02. DUAL PROFILE</div>
+          <h2 class="section-title" data-i18n="about.title">THE HYBRID MINDSET</h2>
+          <p class="section-subtitle" data-i18n="about.subtitle">
             Most developers either write code or make art. I operate at the intersection where mechanics, physics, and visual storytelling elevate one another.
           </p>
         </header>
@@ -207,10 +222,10 @@
         <!-- Intro Narrative & Identity Card -->
         <div class="about-intro-grid reveal-on-scroll">
           <div class="about-narrative">
-            <p>
+            <p data-i18n="about.narrativeP1" data-i18n-html>
               I am a <span class="highlight">Game Developer and Digital Artist</span> passionate about designing and implementing games that feel tactile, responsive, and visually memorable. My background combines rigorous software engineering principles with an eye for composition, lighting, and spatial atmosphere.
             </p>
-            <p>
+            <p data-i18n="about.narrativeP2" data-i18n-html>
               Whether engineering custom physics controllers, optimizing rendering pipelines, sculpting 3D game-ready assets, or scripting interactive gameplay systems in C#, I take pride in taking ideas from concept sketch to playable prototype.
             </p>
           </div>
@@ -220,11 +235,11 @@
             <div class="badge-card-header">
               <img src="./assets/images/avatar-placeholder.svg" alt="Monogram avatar placeholder" class="badge-card-avatar" width="54" height="54">
               <div class="badge-card-meta">
-                <h3>CREATIVE DEVELOPER</h3>
+                <h3 data-i18n="about.badgeTitle">CREATIVE DEVELOPER</h3>
                 <p>DEV_ID // 0x4744_415254</p>
               </div>
             </div>
-            <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:1.25rem;">
+            <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:1.25rem;" data-i18n="about.badgeDesc">
               Dedicated to video game development, technical art experimentation, and interactive 3D digital experiences.
             </p>
             <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
@@ -238,17 +253,17 @@
 
         <!-- Interactive Profile Inspector Tabs -->
         <div class="dual-identity-header reveal-on-scroll">
-          <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); text-transform:uppercase;">
+          <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); text-transform:uppercase;" data-i18n="about.tabsExplore">
             EXPLORE PROFILE PERSPECTIVES:
           </span>
           <div class="dual-identity-tabs" role="tablist" aria-label="Profile View Selector">
-            <button class="dual-tab-btn is-active" data-profile="both" role="tab" aria-selected="true" aria-pressed="true">
+            <button class="dual-tab-btn is-active" data-profile="both" role="tab" aria-selected="true" aria-pressed="true" data-i18n="about.tabBoth">
               SYNTHESIS (BOTH)
             </button>
-            <button class="dual-tab-btn" data-profile="technical" role="tab" aria-selected="false" aria-pressed="false">
+            <button class="dual-tab-btn" data-profile="technical" role="tab" aria-selected="false" aria-pressed="false" data-i18n="about.tabTech">
               TECHNICAL MINDSET
             </button>
-            <button class="dual-tab-btn" data-profile="artistic" role="tab" aria-selected="false" aria-pressed="false">
+            <button class="dual-tab-btn" data-profile="artistic" role="tab" aria-selected="false" aria-pressed="false" data-i18n="about.tabArt">
               ARTISTIC MINDSET
             </button>
           </div>
@@ -265,34 +280,34 @@
                   <line x1="12" y1="19" x2="20" y2="19"></line>
                 </svg>
               </div>
-              <span class="mindset-index">// CORE 01</span>
+              <span class="mindset-index" data-i18n="about.techCore">// CORE 01</span>
             </div>
 
-            <h3 class="mindset-title">TECHNICAL MINDSET</h3>
-            <p class="mindset-desc">
+            <h3 class="mindset-title" data-i18n="about.techTitle">TECHNICAL MINDSET</h3>
+            <p class="mindset-desc" data-i18n="about.techDesc">
               Building robust gameplay foundations through clean software engineering, algorithmic logic, and responsive player controllers.
             </p>
 
             <ul class="mindset-list">
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>Game Programming &amp; Architecture:</strong> Clean, modular, and decoupled C# code adhering to SOLID principles.</span>
+                <span data-i18n="about.techItem1" data-i18n-html><strong>Game Programming &amp; Architecture:</strong> Clean, modular, and decoupled C# code adhering to SOLID principles.</span>
               </li>
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>Gameplay Mechanics:</strong> Kinematic character controllers, state machines, inventory engines, and combat logic.</span>
+                <span data-i18n="about.techItem2" data-i18n-html><strong>Gameplay Mechanics:</strong> Kinematic character controllers, state machines, inventory engines, and combat logic.</span>
               </li>
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>Physics &amp; Collision Handling:</strong> Custom sweeps, raycasting, trajectory forecasting, and deterministic time scaling.</span>
+                <span data-i18n="about.techItem3" data-i18n-html><strong>Physics &amp; Collision Handling:</strong> Custom sweeps, raycasting, trajectory forecasting, and deterministic time scaling.</span>
               </li>
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>Systems Design:</strong> Event buses, scriptable object architectures, and serialization data pipelines.</span>
+                <span data-i18n="about.techItem4" data-i18n-html><strong>Systems Design:</strong> Event buses, scriptable object architectures, and serialization data pipelines.</span>
               </li>
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>Performance &amp; Profiling:</strong> Draw-call minimization, garbage collection mitigation, and frame-time stabilization.</span>
+                <span data-i18n="about.techItem5" data-i18n-html><strong>Performance &amp; Profiling:</strong> Draw-call minimization, garbage collection mitigation, and frame-time stabilization.</span>
               </li>
             </ul>
           </article>
@@ -307,34 +322,34 @@
                   <line x1="12" y1="22.08" x2="12" y2="12"></line>
                 </svg>
               </div>
-              <span class="mindset-index">// CORE 02</span>
+              <span class="mindset-index" data-i18n="about.artCore">// CORE 02</span>
             </div>
 
-            <h3 class="mindset-title">ARTISTIC MINDSET</h3>
-            <p class="mindset-desc">
+            <h3 class="mindset-title" data-i18n="about.artTitle">ARTISTIC MINDSET</h3>
+            <p class="mindset-desc" data-i18n="about.artDesc">
               Creating atmospheric worlds through sculptural form, lighting, materials, and cohesive aesthetic direction.
             </p>
 
             <ul class="mindset-list">
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>3D Modelling &amp; Topology:</strong> Hard-surface and low-to-mid poly assets optimized with clean quad topology in Blender.</span>
+                <span data-i18n="about.artItem1" data-i18n-html><strong>3D Modelling &amp; Topology:</strong> Hard-surface and low-to-mid poly assets optimized with clean quad topology in Blender.</span>
               </li>
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>PBR Texturing &amp; Shading:</strong> Trim-sheet workflows, UV unwrapping, normal baking, and physically based rendering.</span>
+                <span data-i18n="about.artItem2" data-i18n-html><strong>PBR Texturing &amp; Shading:</strong> Trim-sheet workflows, UV unwrapping, normal baking, and physically based rendering.</span>
               </li>
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>Lighting &amp; Composition:</strong> Volumetric atmosphere, dramatic contrast, depth cues, and environmental storytelling.</span>
+                <span data-i18n="about.artItem3" data-i18n-html><strong>Lighting &amp; Composition:</strong> Volumetric atmosphere, dramatic contrast, depth cues, and environmental storytelling.</span>
               </li>
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>Animation &amp; Kinematics:</strong> Rigging, keyframing, procedural camera shakes, and animation blends.</span>
+                <span data-i18n="about.artItem4" data-i18n-html><strong>Animation &amp; Kinematics:</strong> Rigging, keyframing, procedural camera shakes, and animation blends.</span>
               </li>
               <li class="mindset-item">
                 <span class="mindset-item-dot"></span>
-                <span><strong>Creative Experimentation:</strong> Exploring generative aesthetics, surreal game concepts, and expressive visual motifs.</span>
+                <span data-i18n="about.artItem5" data-i18n-html><strong>Creative Experimentation:</strong> Exploring generative aesthetics, surreal game concepts, and expressive visual motifs.</span>
               </li>
             </ul>
           </article>
@@ -349,9 +364,9 @@
       <div class="container">
         <!-- Section Header -->
         <header class="section-header reveal-on-scroll">
-          <div class="section-eyebrow">03. TOOLKIT</div>
-          <h2 class="section-title">SKILLS &amp; PROFICIENCIES</h2>
-          <p class="section-subtitle">
+          <div class="section-eyebrow" data-i18n="skills.eyebrow">03. TOOLKIT</div>
+          <h2 class="section-title" data-i18n="skills.title">SKILLS &amp; PROFICIENCIES</h2>
+          <p class="section-subtitle" data-i18n="skills.subtitle">
             An organized breakdown of technical disciplines, creative software, and engineering workflows applied to game development.
           </p>
         </header>
@@ -369,8 +384,8 @@
                 <circle cx="17" cy="13" r="1"></circle>
               </svg>
             </div>
-            <h3 class="pillar-title">GAME DEVELOPMENT</h3>
-            <p class="pillar-caption">Core engines, programming languages &amp; mechanics</p>
+            <h3 class="pillar-title" data-i18n="skills.pillar1Title">GAME DEVELOPMENT</h3>
+            <p class="pillar-caption" data-i18n="skills.pillar1Sub">Core engines, programming languages &amp; mechanics</p>
 
             <ul class="skill-list">
               <li class="skill-item">
@@ -392,13 +407,13 @@
                 </div>
               </li>
               <li class="skill-item">
-                <span class="skill-name">Game Systems Design</span>
+                <span class="skill-name" data-i18n="skills.gameDesign">Game Systems Design</span>
                 <div class="skill-indicator" aria-hidden="true">
                   <span class="indicator-dot"></span><span class="indicator-dot"></span><span class="indicator-dot"></span>
                 </div>
               </li>
               <li class="skill-item">
-                <span class="skill-name">Rapid Prototyping</span>
+                <span class="skill-name" data-i18n="skills.prototyping">Rapid Prototyping</span>
                 <div class="skill-indicator" aria-hidden="true">
                   <span class="indicator-dot"></span><span class="indicator-dot"></span><span class="indicator-dot"></span>
                 </div>
@@ -415,8 +430,8 @@
                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
               </svg>
             </div>
-            <h3 class="pillar-title">3D &amp; ART</h3>
-            <p class="pillar-caption">Asset pipelines, texturing &amp; visual direction</p>
+            <h3 class="pillar-title" data-i18n="skills.pillar2Title">3D &amp; ART</h3>
+            <p class="pillar-caption" data-i18n="skills.pillar2Sub">Asset pipelines, texturing &amp; visual direction</p>
 
             <ul class="skill-list">
               <li class="skill-item">
@@ -428,7 +443,7 @@
                 </div>
               </li>
               <li class="skill-item">
-                <span class="skill-name">3D Modelling &amp; Topology</span>
+                <span class="skill-name" data-i18n="skills.modelling">3D Modelling &amp; Topology</span>
                 <div class="skill-indicator" aria-hidden="true">
                   <span class="indicator-dot" style="background:var(--accent-violet)"></span>
                   <span class="indicator-dot" style="background:var(--accent-violet)"></span>
@@ -436,7 +451,7 @@
                 </div>
               </li>
               <li class="skill-item">
-                <span class="skill-name">PBR Texturing &amp; UVs</span>
+                <span class="skill-name" data-i18n="skills.texturing">PBR Texturing &amp; UVs</span>
                 <div class="skill-indicator" aria-hidden="true">
                   <span class="indicator-dot" style="background:var(--accent-violet)"></span>
                   <span class="indicator-dot" style="background:var(--accent-violet)"></span>
@@ -444,7 +459,7 @@
                 </div>
               </li>
               <li class="skill-item">
-                <span class="skill-name">Keyframe Animation</span>
+                <span class="skill-name" data-i18n="skills.animation">Keyframe Animation</span>
                 <div class="skill-indicator" aria-hidden="true">
                   <span class="indicator-dot" style="background:var(--accent-violet)"></span>
                   <span class="indicator-dot" style="background:var(--accent-violet)"></span>
@@ -452,7 +467,7 @@
                 </div>
               </li>
               <li class="skill-item">
-                <span class="skill-name">Visual Development &amp; Mood</span>
+                <span class="skill-name" data-i18n="skills.visDev">Visual Development &amp; Mood</span>
                 <div class="skill-indicator" aria-hidden="true">
                   <span class="indicator-dot" style="background:var(--accent-violet)"></span>
                   <span class="indicator-dot" style="background:var(--accent-violet)"></span>
@@ -470,8 +485,8 @@
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
             </div>
-            <h3 class="pillar-title">CREATIVE &amp; TECHNICAL</h3>
-            <p class="pillar-caption">Front-end tech, version control &amp; pipelines</p>
+            <h3 class="pillar-title" data-i18n="skills.pillar3Title">CREATIVE &amp; TECHNICAL</h3>
+            <p class="pillar-caption" data-i18n="skills.pillar3Sub">Front-end tech, version control &amp; pipelines</p>
 
             <ul class="skill-list">
               <li class="skill-item">
@@ -507,7 +522,7 @@
                 </div>
               </li>
               <li class="skill-item">
-                <span class="skill-name">Game UI / UX Design</span>
+                <span class="skill-name" data-i18n="skills.uiUx">Game UI / UX Design</span>
                 <div class="skill-indicator" aria-hidden="true">
                   <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
                   <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
@@ -527,9 +542,9 @@
       <div class="container">
         <!-- Section Header -->
         <header class="section-header reveal-on-scroll">
-          <div class="section-eyebrow">04. SELECTED WORKS</div>
-          <h2 class="section-title">FEATURED PROJECTS</h2>
-          <p class="section-subtitle">
+          <div class="section-eyebrow" data-i18n="projects.eyebrow">04. SELECTED WORKS</div>
+          <h2 class="section-title" data-i18n="projects.title">FEATURED PROJECTS</h2>
+          <p class="section-subtitle" data-i18n="projects.subtitle">
             A curated selection of video game systems, 3D environment studies, and interactive experiments. (Editable placeholders ready for your game titles and media).
           </p>
         </header>
@@ -540,21 +555,23 @@
           <!-- Project 01: Chrono-Shift -->
           <article class="project-card reveal-on-scroll" aria-label="Project Chrono-Shift">
             <div class="project-media-wrap">
-              <span class="project-media-badge tag tag--accent">PLAYABLE PROTOTYPE</span>
+              <span class="project-media-badge tag tag--accent" data-i18n="projects.p1.badge">PLAYABLE PROTOTYPE</span>
               <img src="./assets/images/project-chronoshift.svg" alt="Project Chrono-Shift kinematic physics blueprint and vector trajectory diagram" class="project-img" loading="lazy">
               <div class="project-media-overlay" aria-hidden="true"></div>
             </div>
 
             <div class="project-info">
               <div class="project-header-meta">
-                <span class="tag">GAMEPLAY SYSTEMS</span>
-                <span class="tag tag--cyan">UNITY 6 / C#</span>
+                <span class="tag" data-i18n="projects.p1.category">GAMEPLAY SYSTEMS // C# &amp; UNITY</span>
               </div>
 
-              <h3 class="project-title">PROJECT CHRONO-SHIFT</h3>
-              <div class="project-role-badge">PHYSICS &amp; GAMEPLAY PROGRAMMER</div>
+              <h3 class="project-title" data-i18n="projects.p1.title">PROJECT CHRONO-SHIFT</h3>
+              <div class="project-role-badge">
+                <span data-i18n="projects.rolePrefix">ROLE:</span>
+                <span data-i18n="projects.p1.role">PHYSICS &amp; GAMEPLAY PROGRAMMER</span>
+              </div>
 
-              <p class="project-description">
+              <p class="project-description" data-i18n="projects.p1.desc">
                 A high-octane 3D gameplay prototype exploring continuous time dilation, predictive trajectory calculation, and custom kinematic character physics with rewind mechanics.
               </p>
 
@@ -568,7 +585,7 @@
 
               <div class="project-actions">
                 <button type="button" class="btn btn--primary btn-project-details" data-project="chronoshift">
-                  <span>INSPECT BLUEPRINT</span>
+                  <span data-i18n="projects.btnBlueprint">INSPECT BLUEPRINT</span>
                   <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
@@ -577,13 +594,13 @@
                   <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
-                  <span>SOURCE</span>
+                  <span data-i18n="projects.btnSource">SOURCE</span>
                 </a>
                 <a href="https://itch.io" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" aria-label="Play on itch.io">
                   <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M2.667 3.5A2.667 2.667 0 0 0 0 6.167v1.166C0 8.81 1.258 10 2.75 10c1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.492 0 2.75-1.19 2.75-2.667V6.167A2.667 2.667 0 0 0 21.333 3.5H2.667z"/>
+                    <path d="M2.667 3.5A2.667 2.667 0 0 0 0 6.167v1.166C0 8.81 1.258 10 2.75 10c1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.19 2.75-2.667V6.167A2.667 2.667 0 0 0 21.333 3.5H2.667z"/>
                   </svg>
-                  <span>ITCH.IO</span>
+                  <span data-i18n="projects.btnItch">ITCH.IO</span>
                 </a>
               </div>
             </div>
@@ -592,21 +609,23 @@
           <!-- Project 02: Neo-Ruins Sector 7 -->
           <article class="project-card reveal-on-scroll" aria-label="Project Neo-Ruins Sector 7">
             <div class="project-media-wrap">
-              <span class="project-media-badge tag tag--violet">3D ART SHOWCASE</span>
+              <span class="project-media-badge tag tag--violet" data-i18n="projects.p2.badge">3D ART SHOWCASE</span>
               <img src="./assets/images/project-neoruins.svg" alt="Neo-Ruins Sector 7 cyberpunk environment wireframe and monolithic geometry" class="project-img" loading="lazy">
               <div class="project-media-overlay" aria-hidden="true"></div>
             </div>
 
             <div class="project-info">
               <div class="project-header-meta">
-                <span class="tag">3D ENVIRONMENT ART</span>
-                <span class="tag tag--violet">BLENDER &amp; PBR</span>
+                <span class="tag tag--violet" data-i18n="projects.p2.category">3D ENVIRONMENT // BLENDER &amp; PBR</span>
               </div>
 
-              <h3 class="project-title">NEO-RUINS: SECTOR 7</h3>
-              <div class="project-role-badge">ENVIRONMENT ARTIST &amp; LEVEL DESIGNER</div>
+              <h3 class="project-title" data-i18n="projects.p2.title">NEO-RUINS: SECTOR 7</h3>
+              <div class="project-role-badge">
+                <span data-i18n="projects.rolePrefix">ROLE:</span>
+                <span data-i18n="projects.p2.role">ENVIRONMENT ARTIST &amp; LEVEL DESIGNER</span>
+              </div>
 
-              <p class="project-description">
+              <p class="project-description" data-i18n="projects.p2.desc">
                 A moody brutalist cyberpunk environment built for real-time engine rendering. Utilizing modular trim-sheets, custom decals, and high-to-low poly normal transfers for maximum fidelity within strict draw budgets.
               </p>
 
@@ -620,7 +639,7 @@
 
               <div class="project-actions">
                 <button type="button" class="btn btn--primary btn-project-details" data-project="neoruins">
-                  <span>INSPECT ASSETS</span>
+                  <span data-i18n="projects.btnAssets">INSPECT ASSETS</span>
                   <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
@@ -629,7 +648,7 @@
                   <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
-                  <span>BREAKDOWN</span>
+                  <span data-i18n="projects.btnBreakdown">BREAKDOWN</span>
                 </a>
               </div>
             </div>
@@ -638,21 +657,23 @@
           <!-- Project 03: Procedural Odyssey -->
           <article class="project-card reveal-on-scroll" aria-label="Project Procedural Odyssey">
             <div class="project-media-wrap">
-              <span class="project-media-badge tag tag--cyan">IN DEVELOPMENT</span>
+              <span class="project-media-badge tag tag--cyan" data-i18n="projects.p3.badge">IN DEVELOPMENT</span>
               <img src="./assets/images/project-odyssey.svg" alt="Procedural Odyssey GPU shader node network and topographic contour elevation" class="project-img" loading="lazy">
               <div class="project-media-overlay" aria-hidden="true"></div>
             </div>
 
             <div class="project-info">
               <div class="project-header-meta">
-                <span class="tag">CREATIVE TECH</span>
-                <span class="tag tag--cyan">HLSL COMPUTE</span>
+                <span class="tag tag--cyan" data-i18n="projects.p3.category">CREATIVE TECH // HLSL COMPUTE</span>
               </div>
 
-              <h3 class="project-title">PROCEDURAL ODYSSEY</h3>
-              <div class="project-role-badge">CREATIVE TECHNOLOGIST &amp; SHADER DEV</div>
+              <h3 class="project-title" data-i18n="projects.p3.title">PROCEDURAL ODYSSEY</h3>
+              <div class="project-role-badge">
+                <span data-i18n="projects.rolePrefix">ROLE:</span>
+                <span data-i18n="projects.p3.role">CREATIVE TECHNOLOGIST &amp; SHADER DEV</span>
+              </div>
 
-              <p class="project-description">
+              <p class="project-description" data-i18n="projects.p3.desc">
                 Real-time GPU terrain synthesizer executing Marching Cubes algorithm inside compute buffers. Features asynchronous chunk streaming, simplex-noise biomes, and procedural level layouts.
               </p>
 
@@ -666,7 +687,7 @@
 
               <div class="project-actions">
                 <button type="button" class="btn btn--primary btn-project-details" data-project="odyssey">
-                  <span>INSPECT PIPELINE</span>
+                  <span data-i18n="projects.btnPipeline">INSPECT PIPELINE</span>
                   <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
@@ -675,7 +696,7 @@
                   <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
-                  <span>SOURCE</span>
+                  <span data-i18n="projects.btnSource">SOURCE</span>
                 </a>
               </div>
             </div>
@@ -691,14 +712,14 @@
     <section id="contact" class="section contact-section" aria-label="Contact Information">
       <div class="container">
         <div class="contact-card reveal-on-scroll">
-          <div class="section-eyebrow">05. TRANSMISSION</div>
+          <div class="section-eyebrow" data-i18n="contact.eyebrow">05. TRANSMISSION</div>
           
-          <h2 class="contact-headline">
+          <h2 class="contact-headline" data-i18n="contact.headline" data-i18n-html>
             HAVE A PROJECT IN MIND?<br>
             <span style="color:var(--accent-lime);">LET'S BUILD SOMETHING.</span>
           </h2>
 
-          <p class="contact-text">
+          <p class="contact-text" data-i18n="contact.desc">
             I am currently open to full-time studio roles, technical art collaborations, and indie game development opportunities. Whether you need gameplay systems built from scratch or 3D visual direction, let's connect.
           </p>
 
@@ -709,7 +730,7 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              <span>SEND AN EMAIL</span>
+              <span data-i18n="contact.sendEmail">SEND AN EMAIL</span>
             </a>
 
             <!-- Copy Email Wrap -->
@@ -720,7 +741,7 @@
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                <span class="copy-label">COPY</span>
+                <span class="copy-label" data-i18n="contact.copyEmail">COPY</span>
               </button>
             </div>
 
@@ -732,7 +753,7 @@
                 <line x1="16" y1="13" x2="8" y2="13"></line>
                 <line x1="16" y1="17" x2="8" y2="17"></line>
               </svg>
-              <span>DOWNLOAD CV (PDF)</span>
+              <span data-i18n="contact.downloadCv">DOWNLOAD CV (PDF)</span>
             </a>
           </div>
 
@@ -747,7 +768,7 @@
               </div>
               <div class="social-meta">
                 <h4>GITHUB</h4>
-                <p>@amarque1</p>
+                <p data-i18n="contact.socialGithubSub">@amarque1</p>
               </div>
             </a>
 
@@ -760,7 +781,7 @@
               </div>
               <div class="social-meta">
                 <h4>LINKEDIN</h4>
-                <p>Professional Network</p>
+                <p data-i18n="contact.socialLinkedinSub">Professional Network</p>
               </div>
             </a>
 
@@ -768,12 +789,12 @@
             <a href="https://itch.io" target="_blank" rel="noopener noreferrer" class="social-link-card">
               <div class="social-icon-box" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M2.667 3.5A2.667 2.667 0 0 0 0 6.167v1.166C0 8.81 1.258 10 2.75 10c1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.492 0 2.75-1.19 2.75-2.667V6.167A2.667 2.667 0 0 0 21.333 3.5H2.667z"/>
+                  <path d="M2.667 3.5A2.667 2.667 0 0 0 0 6.167v1.166C0 8.81 1.258 10 2.75 10c1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.19 2.75-2.667V6.167A2.667 2.667 0 0 0 21.333 3.5H2.667z"/>
                 </svg>
               </div>
               <div class="social-meta">
                 <h4>ITCH.IO</h4>
-                <p>Playable Game Demos</p>
+                <p data-i18n="contact.socialItchSub">Playable Game Demos</p>
               </div>
             </a>
           </div>
@@ -790,13 +811,13 @@
     <div class="container footer-content">
       <div>
         <span>&copy; <span class="footer-year">2026</span> CREATIVE DEVELOPER &amp; GAME ARTIST.</span>
-        <span style="display:inline-block; margin-left:0.5rem; color:var(--text-muted);">ALL RIGHTS RESERVED.</span>
+        <span style="display:inline-block; margin-left:0.5rem; color:var(--text-muted);" data-i18n="footer.rights">ALL RIGHTS RESERVED.</span>
       </div>
 
       <div style="display:flex; align-items:center; gap:1.5rem;">
-        <span style="color:var(--accent-lime); font-size:0.75rem;">HOSTED ON GITHUB PAGES</span>
+        <span style="color:var(--accent-lime); font-size:0.75rem;" data-i18n="footer.hosted">HOSTED ON GITHUB PAGES</span>
         <a href="#hero" class="footer-back-to-top" aria-label="Return to top of page">
-          <span>TOP</span>
+          <span data-i18n="footer.top">TOP</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="18 15 12 9 6 15"></polyline>
           </svg>
@@ -811,7 +832,7 @@
   <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
     <div class="project-modal-backdrop" aria-hidden="true"></div>
     <div class="project-modal-content">
-      <button type="button" class="project-modal-close" aria-label="Close project blueprint modal">
+      <button type="button" class="project-modal-close" aria-label="Close project blueprint modal" data-i18n-attr="aria-label:modal.closeAria">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -826,22 +847,22 @@
 
       <div class="modal-body">
         <div class="modal-section" style="margin-top:0; padding-top:0; border-top:none;">
-          <h4 class="modal-section-title">// PROJECT OVERVIEW</h4>
+          <h4 class="modal-section-title" data-i18n="modal.overviewTitle">// PROJECT OVERVIEW</h4>
           <p class="modal-section-text modal-overview"></p>
         </div>
 
         <div class="modal-section">
-          <h4 class="modal-section-title">// ARCHITECTURE &amp; TECHNICAL DESIGN</h4>
+          <h4 class="modal-section-title" data-i18n="modal.archTitle">// ARCHITECTURE &amp; TECHNICAL DESIGN</h4>
           <p class="modal-section-text modal-architecture"></p>
         </div>
 
         <div class="modal-section">
-          <h4 class="modal-section-title">// CHALLENGES &amp; SOLUTIONS</h4>
+          <h4 class="modal-section-title" data-i18n="modal.challengesTitle">// CHALLENGES &amp; SOLUTIONS</h4>
           <p class="modal-section-text modal-challenges"></p>
         </div>
 
         <div class="modal-section">
-          <h4 class="modal-section-title">// CONTROLS &amp; INTERFACE</h4>
+          <h4 class="modal-section-title" data-i18n="modal.controlsTitle">// CONTROLS &amp; INTERFACE</h4>
           <p class="modal-section-text modal-controls" style="font-family:var(--font-mono); font-size:0.85rem; color:var(--text-primary);"></p>
         </div>
       </div>
@@ -856,7 +877,8 @@
     <span class="toast-text">Notification message</span>
   </div>
 
-  <!-- Scripts -->
+  <!-- Scripts: i18n loaded first to enable immediate localized rendering -->
+  <script src="./js/i18n.js"></script>
   <script src="./js/particles.js"></script>
   <script src="./js/interactions.js"></script>
   <script src="./js/main.js"></script>

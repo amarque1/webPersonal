@@ -178,14 +178,32 @@
     };
 
     let previousActiveElement = null;
+    let activeProjectId = null;
 
-    function openModal(projectId) {
-      const data = projectsData[projectId];
+    function getProjectData(projectId) {
+      if (window.i18n && window.i18n.translations) {
+        const lang = window.i18n.currentLang;
+        const pKey = projectId === 'chronoshift' ? 'p1' : (projectId === 'neoruins' ? 'p2' : 'p3');
+        const pData = window.i18n.translations[lang]?.projects?.[pKey];
+        if (pData) {
+          return {
+            title: pData.title,
+            role: pData.role,
+            category: pData.category,
+            overview: pData.overview,
+            architecture: pData.architecture,
+            challenges: pData.challenges,
+            controls: pData.controls
+          };
+        }
+      }
+      return projectsData[projectId];
+    }
+
+    function renderModalContent(projectId) {
+      const data = getProjectData(projectId);
       if (!data) return;
 
-      previousActiveElement = document.activeElement;
-
-      // Fill modal contents
       modal.querySelector('.modal-tag').textContent = data.category;
       modal.querySelector('.modal-title').textContent = data.title;
       modal.querySelector('.modal-role').textContent = data.role;
@@ -193,6 +211,13 @@
       modal.querySelector('.modal-architecture').textContent = data.architecture;
       modal.querySelector('.modal-challenges').textContent = data.challenges;
       modal.querySelector('.modal-controls').textContent = data.controls;
+    }
+
+    function openModal(projectId) {
+      activeProjectId = projectId;
+      previousActiveElement = document.activeElement;
+
+      renderModalContent(projectId);
 
       modal.classList.add('is-open');
       document.body.style.overflow = 'hidden';
@@ -200,12 +225,20 @@
     }
 
     function closeModal() {
+      activeProjectId = null;
       modal.classList.remove('is-open');
       document.body.style.overflow = '';
       if (previousActiveElement) {
         previousActiveElement.focus();
       }
     }
+
+    // Refresh open modal when language switches
+    window.addEventListener('portfolioLanguageChange', () => {
+      if (activeProjectId && modal.classList.contains('is-open')) {
+        renderModalContent(activeProjectId);
+      }
+    });
 
     detailBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -254,20 +287,23 @@
 
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(email).then(() => {
-            showToast(`Copied ${email} to clipboard!`);
+            const toastTemplate = window.i18n ? window.i18n.t('toast.copiedEmail') : 'Copied {email} to clipboard!';
+            showToast(toastTemplate.replace('{email}', email));
+
             const label = btn.querySelector('.copy-label');
             if (label) {
               const originalText = label.textContent;
-              label.textContent = 'COPIED!';
+              const copiedText = window.i18n ? window.i18n.t('contact.copied') : 'COPIED!';
+              label.textContent = copiedText;
               setTimeout(() => {
-                label.textContent = originalText;
+                const defaultCopyText = window.i18n ? window.i18n.t('contact.copyEmail') : originalText;
+                label.textContent = defaultCopyText;
               }, 2000);
             }
           }).catch(() => {
             showToast(`Email: ${email}`);
           });
         } else {
-          // Fallback
           showToast(`Email: ${email}`);
         }
       });

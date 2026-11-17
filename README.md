@@ -22,7 +22,8 @@ Built exclusively with **HTML5, CSS3, and Vanilla JavaScript** — zero external
 - **HTML5:** Semantic architecture, accessible landmarks (`<main>`, `<section>`, `<article>`, `<header>`, `<footer>`), ARIA attributes, skip-link.
 - **CSS3:** Custom properties (CSS variables), CSS Grid & Flexbox, clamp typography, backdrop filters, keyframe animations, `@media (prefers-reduced-motion)`.
 - **Vanilla JavaScript (ES6+):**
-  - Modular structure (`particles.js`, `interactions.js`, `main.js`).
+  - Modular structure (`i18n.js`, `particles.js`, `interactions.js`, `main.js`).
+  - **Multi-language internationalization (i18n):** Full tri-lingual support (Català, Español, English) with automatic browser detection, English fallback, and persistent choice via `localStorage`.
   - Interactive HTML Canvas particle system with mouse proximity, trail physics, touch support, and adaptive density.
   - Dual-identity profile inspector with interactive focus switching.
   - Accessible modal dialog for architectural project breakdowns.
@@ -64,6 +65,7 @@ webPersonal/
 │   ├── style.css                # Design system, layout, typography, components
 │   └── animations.css           # Keyframes, cursor, scroll-reveal, reduced-motion
 ├── js/
+│   ├── i18n.js                  # Internationalization engine (CA, ES, EN) & auto-detection
 │   ├── main.js                  # Nav, scroll-spy, mobile drawer, HUD telemetry
 │   ├── particles.js             # Canvas particle background with proximity & physics
 │   └── interactions.js          # Custom cursor, dual-profile switcher, modal, copy
@@ -71,6 +73,22 @@ webPersonal/
     └── workflows/
         └── deploy.yml           # Automated GitHub Pages CI/CD workflow
 ```
+
+---
+
+## 🌍 Multi-language & Browser Detection (i18n)
+
+The website natively supports three languages:
+- **Català (`ca`)**
+- **Castellà / Español (`es`)**
+- **Anglès / English (`en`)**
+
+### How automatic language detection works:
+1. **User Override:** If the user previously clicked a language button (`CA`, `ES`, `EN`), that preference is saved in `localStorage` and always takes priority.
+2. **Browser Adaptation:** If no saved preference exists, the site inspects `navigator.languages` and `navigator.language` to match against `ca`, `es`, or `en`.
+3. **Fallback Behavior (Què passa si l'idioma no és cap d'aquests 3?):**
+   - If a visitor arrives whose browser is set to any unsupported language (e.g. French, German, Japanese, Portuguese, etc.), the system automatically **falls back to English (`en`)**, the universal standard in game development and international tech hiring.
+   - The user can still switch to Català or Castellà at any time using the header switcher pills.
 
 ---
 
