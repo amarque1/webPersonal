@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of a Creative Developer & Game Artist specializing in Unity, C#, Gameplay Systems, 3D Modelling, and Technical Art.">
+  <meta name="keywords" content="Game Developer, Game Artist, Unity, C#, Blender, Technical Artist, Creative Technologist, Portfolio">
+  <meta name="author" content="Creative Developer & Game Artist">
+  <meta name="theme-color" content="#08090B">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Creative Developer & Game Artist | Portfolio">
+  <meta property="og:description" content="Game development, gameplay programming, Unity, C#, 3D modelling, visual direction, and creative technology.">
+  <meta property="og:image" content="./assets/images/project-chronoshift.svg">
+
+  <title>Creative Developer &amp; Game Artist — Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/avatar-placeholder.svg">
+
+  <!-- Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animations.css">
+</head>
+<body>
+
+  <!-- Skip Navigation for Accessibility -->
+  <a href="#main-content" class="skip-to-content">SKIP TO CONTENT [TAB]</a>
+
+  <!-- Page Intro Loader -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">INITIALIZING ENGINE // 0x7E</div>
+  </div>
+
+  <!-- Custom Cursor Elements (Desktop) -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <!-- Monogram Brand -->
+      <a href="#hero" class="brand-link" aria-label="Home">
+        <div class="brand-emblem" aria-hidden="true">
+          <span>GD</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">PORTFOLIO</span>
+          <span class="brand-subtitle">GAME DEV &amp; ART</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-wrapper" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Status Pill Indicator -->
+      <div class="status-pill" title="Currently considering new career opportunities">
+        <span class="status-dot"></span>
+        <span>OPEN TO OPPORTUNITIES</span>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-nav-drawer" class="mobile-drawer" aria-hidden="true">
+    <ul class="mobile-menu">
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>OPEN TO OPPORTUNITIES</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         01. HERO SECTION
+         ========================================================================== -->
+    <section id="hero" class="hero-section" aria-label="Hero Introduction">
+      <!-- Interactive Particle Canvas Background -->
+      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero-content">
+        <!-- Identity Metadata Tag -->
+        <div class="hero-meta-bar reveal-on-scroll">
+          <div class="hero-identity-tag">
+            <span>GAME DEVELOPER</span>
+            <span style="opacity:0.4;">/</span>
+            <span>DIGITAL ARTIST</span>
+          </div>
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>OPEN TO OPPORTUNITIES</span>
+          </div>
+        </div>
+
+        <!-- Expressive Headline -->
+        <h1 class="hero-headline reveal-on-scroll reveal-stagger-1">
+          <span class="headline-line text-gradient">BUILDING WORLDS.</span>
+          <span class="headline-line text-outline">CRAFTING EXPERIENCES.</span>
+        </h1>
+
+        <!-- Concise Introduction -->
+        <p class="hero-bio reveal-on-scroll reveal-stagger-2">
+          Bridging <strong>gameplay programming</strong>, <strong>physics simulation</strong>, and <strong>3D visual direction</strong>. Developing responsive gameplay mechanics in Unity &amp; C# while authoring atmospheric 3D environments, shaders, and digital art.
+        </p>
+
+        <!-- Call to Actions -->
+        <div class="hero-cta-group reveal-on-scroll reveal-stagger-3">
+          <a href="#projects" class="btn btn--primary">
+            <span>EXPLORE MY WORK</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn--secondary">
+            <span>CONTACT ME</span>
+          </a>
+          <a href="./assets/cv/cv-placeholder.pdf" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>RESUME / CV</span>
+          </a>
+        </div>
+
+        <!-- Live Telemetry HUD Bar -->
+        <div class="hero-hud reveal-on-scroll reveal-stagger-3" aria-label="System Telemetry">
+          <div class="hud-item">
+            <span class="hud-label">STATUS:</span>
+            <span class="hud-value hud-value--accent">OPERATIONAL // ENGINE ACTIVE</span>
+          </div>
+          <div class="hud-item">
+            <span class="hud-label">COORDS:</span>
+            <span class="hud-value hud-value-coords">37.7749° N, 122.4194° W</span>
+          </div>
+          <div class="hud-item">
+            <span class="hud-label">SYS_TIME:</span>
+            <span class="hud-value hud-value-time">--:--:-- UTC</span>
+          </div>
+          <div class="hud-item">
+            <span class="hud-label">REFRESH:</span>
+            <span class="hud-value hud-value-fps">60 FPS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to About section">
+        <div class="scroll-mouse" aria-hidden="true">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>SCROLL</span>
+      </a>
+    </section>
+
+    <!-- ==========================================================================
+         02. ABOUT ME SECTION — DUAL PROFILE
+         ========================================================================== -->
+    <section id="about" class="section about-section" aria-label="About Me">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header reveal-on-scroll">
+          <div class="section-eyebrow">02. DUAL PROFILE</div>
+          <h2 class="section-title">THE HYBRID MINDSET</h2>
+          <p class="section-subtitle">
+            Most developers either write code or make art. I operate at the intersection where mechanics, physics, and visual storytelling elevate one another.
+          </p>
+        </header>
+
+        <!-- Intro Narrative & Identity Card -->
+        <div class="about-intro-grid reveal-on-scroll">
+          <div class="about-narrative">
+            <p>
+              I am a <span class="highlight">Game Developer and Digital Artist</span> passionate about designing and implementing games that feel tactile, responsive, and visually memorable. My background combines rigorous software engineering principles with an eye for composition, lighting, and spatial atmosphere.
+            </p>
+            <p>
+              Whether engineering custom physics controllers, optimizing rendering pipelines, sculpting 3D game-ready assets, or scripting interactive gameplay systems in C#, I take pride in taking ideas from concept sketch to playable prototype.
+            </p>
+          </div>
+
+          <!-- Identity Badge Card -->
+          <div class="about-badge-card">
+            <div class="badge-card-header">
+              <img src="./assets/images/avatar-placeholder.svg" alt="Monogram avatar placeholder" class="badge-card-avatar" width="54" height="54">
+              <div class="badge-card-meta">
+                <h3>CREATIVE DEVELOPER</h3>
+                <p>DEV_ID // 0x4744_415254</p>
+              </div>
+            </div>
+            <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:1.25rem;">
+              Dedicated to video game development, technical art experimentation, and interactive 3D digital experiences.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+              <span class="tag tag--accent">UNITY 6</span>
+              <span class="tag tag--cyan">C# SYSTEMS</span>
+              <span class="tag tag--violet">BLENDER 3D</span>
+              <span class="tag">HLSL SHADERS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Profile Inspector Tabs -->
+        <div class="dual-identity-header reveal-on-scroll">
+          <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); text-transform:uppercase;">
+            EXPLORE PROFILE PERSPECTIVES:
+          </span>
+          <div class="dual-identity-tabs" role="tablist" aria-label="Profile View Selector">
+            <button class="dual-tab-btn is-active" data-profile="both" role="tab" aria-selected="true" aria-pressed="true">
+              SYNTHESIS (BOTH)
+            </button>
+            <button class="dual-tab-btn" data-profile="technical" role="tab" aria-selected="false" aria-pressed="false">
+              TECHNICAL MINDSET
+            </button>
+            <button class="dual-tab-btn" data-profile="artistic" role="tab" aria-selected="false" aria-pressed="false">
+              ARTISTIC MINDSET
+            </button>
+          </div>
+        </div>
+
+        <!-- Dual Mindset Split Grid -->
+        <div class="dual-identity-grid reveal-on-scroll">
+          <!-- Mindset Block A: Technical -->
+          <article class="mindset-card mindset-card--tech" aria-label="Technical Mindset Profile">
+            <div class="mindset-header">
+              <div class="mindset-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+              <span class="mindset-index">// CORE 01</span>
+            </div>
+
+            <h3 class="mindset-title">TECHNICAL MINDSET</h3>
+            <p class="mindset-desc">
+              Building robust gameplay foundations through clean software engineering, algorithmic logic, and responsive player controllers.
+            </p>
+
+            <ul class="mindset-list">
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>Game Programming &amp; Architecture:</strong> Clean, modular, and decoupled C# code adhering to SOLID principles.</span>
+              </li>
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>Gameplay Mechanics:</strong> Kinematic character controllers, state machines, inventory engines, and combat logic.</span>
+              </li>
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>Physics &amp; Collision Handling:</strong> Custom sweeps, raycasting, trajectory forecasting, and deterministic time scaling.</span>
+              </li>
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>Systems Design:</strong> Event buses, scriptable object architectures, and serialization data pipelines.</span>
+              </li>
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>Performance &amp; Profiling:</strong> Draw-call minimization, garbage collection mitigation, and frame-time stabilization.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Mindset Block B: Artistic -->
+          <article class="mindset-card mindset-card--art" aria-label="Artistic Mindset Profile">
+            <div class="mindset-header">
+              <div class="mindset-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <span class="mindset-index">// CORE 02</span>
+            </div>
+
+            <h3 class="mindset-title">ARTISTIC MINDSET</h3>
+            <p class="mindset-desc">
+              Creating atmospheric worlds through sculptural form, lighting, materials, and cohesive aesthetic direction.
+            </p>
+
+            <ul class="mindset-list">
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>3D Modelling &amp; Topology:</strong> Hard-surface and low-to-mid poly assets optimized with clean quad topology in Blender.</span>
+              </li>
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>PBR Texturing &amp; Shading:</strong> Trim-sheet workflows, UV unwrapping, normal baking, and physically based rendering.</span>
+              </li>
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>Lighting &amp; Composition:</strong> Volumetric atmosphere, dramatic contrast, depth cues, and environmental storytelling.</span>
+              </li>
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>Animation &amp; Kinematics:</strong> Rigging, keyframing, procedural camera shakes, and animation blends.</span>
+              </li>
+              <li class="mindset-item">
+                <span class="mindset-item-dot"></span>
+                <span><strong>Creative Experimentation:</strong> Exploring generative aesthetics, surreal game concepts, and expressive visual motifs.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         03. SKILLS & TOOLKIT SECTION
+         ========================================================================== -->
+    <section id="skills" class="section skills-section" aria-label="Skills and Toolkit">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header reveal-on-scroll">
+          <div class="section-eyebrow">03. TOOLKIT</div>
+          <h2 class="section-title">SKILLS &amp; PROFICIENCIES</h2>
+          <p class="section-subtitle">
+            An organized breakdown of technical disciplines, creative software, and engineering workflows applied to game development.
+          </p>
+        </header>
+
+        <!-- 3 Pillars Grid -->
+        <div class="skills-grid">
+          <!-- Pillar 1: Game Development -->
+          <div class="skill-pillar-card reveal-on-scroll">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                <line x1="6" y1="12" x2="10" y2="12"></line>
+                <line x1="8" y1="10" x2="8" y2="14"></line>
+                <circle cx="15" cy="11" r="1"></circle>
+                <circle cx="17" cy="13" r="1"></circle>
+              </svg>
+            </div>
+            <h3 class="pillar-title">GAME DEVELOPMENT</h3>
+            <p class="pillar-caption">Core engines, programming languages &amp; mechanics</p>
+
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="skill-name">Unity Engine (URP / HDRP)</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot"></span><span class="indicator-dot"></span><span class="indicator-dot"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">C# Programming</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot"></span><span class="indicator-dot"></span><span class="indicator-dot"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Gameplay Programming</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot"></span><span class="indicator-dot"></span><span class="indicator-dot"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Game Systems Design</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot"></span><span class="indicator-dot"></span><span class="indicator-dot"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Rapid Prototyping</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot"></span><span class="indicator-dot"></span><span class="indicator-dot"></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2: 3D & Digital Art -->
+          <div class="skill-pillar-card reveal-on-scroll reveal-stagger-1">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="pillar-title">3D &amp; ART</h3>
+            <p class="pillar-caption">Asset pipelines, texturing &amp; visual direction</p>
+
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="skill-name">Blender 3D</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">3D Modelling &amp; Topology</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">PBR Texturing &amp; UVs</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Keyframe Animation</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Visual Development &amp; Mood</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-violet)"></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3: Creative & Technical Web/Tools -->
+          <div class="skill-pillar-card reveal-on-scroll reveal-stagger-2">
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="pillar-title">CREATIVE &amp; TECHNICAL</h3>
+            <p class="pillar-caption">Front-end tech, version control &amp; pipelines</p>
+
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="skill-name">HTML5 &amp; Semantic Web</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">CSS3 &amp; Modern Layouts</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Vanilla JavaScript (ES6+)</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Git &amp; GitHub Actions</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Game UI / UX Design</span>
+                <div class="skill-indicator" aria-hidden="true">
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                  <span class="indicator-dot" style="background:var(--accent-cyan)"></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         04. SELECTED PROJECTS SECTION
+         ========================================================================== -->
+    <section id="projects" class="section projects-section" aria-label="Selected Projects">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header reveal-on-scroll">
+          <div class="section-eyebrow">04. SELECTED WORKS</div>
+          <h2 class="section-title">FEATURED PROJECTS</h2>
+          <p class="section-subtitle">
+            A curated selection of video game systems, 3D environment studies, and interactive experiments. (Editable placeholders ready for your game titles and media).
+          </p>
+        </header>
+
+        <!-- Projects Feed -->
+        <div class="projects-feed">
+
+          <!-- Project 01: Chrono-Shift -->
+          <article class="project-card reveal-on-scroll" aria-label="Project Chrono-Shift">
+            <div class="project-media-wrap">
+              <span class="project-media-badge tag tag--accent">PLAYABLE PROTOTYPE</span>
+              <img src="./assets/images/project-chronoshift.svg" alt="Project Chrono-Shift kinematic physics blueprint and vector trajectory diagram" class="project-img" loading="lazy">
+              <div class="project-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-header-meta">
+                <span class="tag">GAMEPLAY SYSTEMS</span>
+                <span class="tag tag--cyan">UNITY 6 / C#</span>
+              </div>
+
+              <h3 class="project-title">PROJECT CHRONO-SHIFT</h3>
+              <div class="project-role-badge">PHYSICS &amp; GAMEPLAY PROGRAMMER</div>
+
+              <p class="project-description">
+                A high-octane 3D gameplay prototype exploring continuous time dilation, predictive trajectory calculation, and custom kinematic character physics with rewind mechanics.
+              </p>
+
+              <div class="project-stack">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">PhysX</span>
+                <span class="tag">State Machines</span>
+                <span class="tag">Ring Buffers</span>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn--primary btn-project-details" data-project="chronoshift">
+                  <span>INSPECT BLUEPRINT</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <a href="https://github.com/amarque1/webPersonal" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" aria-label="View source on GitHub">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>SOURCE</span>
+                </a>
+                <a href="https://itch.io" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" aria-label="Play on itch.io">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M2.667 3.5A2.667 2.667 0 0 0 0 6.167v1.166C0 8.81 1.258 10 2.75 10c1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.492 0 2.75-1.19 2.75-2.667V6.167A2.667 2.667 0 0 0 21.333 3.5H2.667z"/>
+                  </svg>
+                  <span>ITCH.IO</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02: Neo-Ruins Sector 7 -->
+          <article class="project-card reveal-on-scroll" aria-label="Project Neo-Ruins Sector 7">
+            <div class="project-media-wrap">
+              <span class="project-media-badge tag tag--violet">3D ART SHOWCASE</span>
+              <img src="./assets/images/project-neoruins.svg" alt="Neo-Ruins Sector 7 cyberpunk environment wireframe and monolithic geometry" class="project-img" loading="lazy">
+              <div class="project-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-header-meta">
+                <span class="tag">3D ENVIRONMENT ART</span>
+                <span class="tag tag--violet">BLENDER &amp; PBR</span>
+              </div>
+
+              <h3 class="project-title">NEO-RUINS: SECTOR 7</h3>
+              <div class="project-role-badge">ENVIRONMENT ARTIST &amp; LEVEL DESIGNER</div>
+
+              <p class="project-description">
+                A moody brutalist cyberpunk environment built for real-time engine rendering. Utilizing modular trim-sheets, custom decals, and high-to-low poly normal transfers for maximum fidelity within strict draw budgets.
+              </p>
+
+              <div class="project-stack">
+                <span class="tag">Blender 4</span>
+                <span class="tag">PBR Shading</span>
+                <span class="tag">Trim Sheets</span>
+                <span class="tag">Level Design</span>
+                <span class="tag">Lighting</span>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn--primary btn-project-details" data-project="neoruins">
+                  <span>INSPECT ASSETS</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <a href="https://github.com/amarque1/webPersonal" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" aria-label="View asset breakdown on GitHub">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>BREAKDOWN</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03: Procedural Odyssey -->
+          <article class="project-card reveal-on-scroll" aria-label="Project Procedural Odyssey">
+            <div class="project-media-wrap">
+              <span class="project-media-badge tag tag--cyan">IN DEVELOPMENT</span>
+              <img src="./assets/images/project-odyssey.svg" alt="Procedural Odyssey GPU shader node network and topographic contour elevation" class="project-img" loading="lazy">
+              <div class="project-media-overlay" aria-hidden="true"></div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-header-meta">
+                <span class="tag">CREATIVE TECH</span>
+                <span class="tag tag--cyan">HLSL COMPUTE</span>
+              </div>
+
+              <h3 class="project-title">PROCEDURAL ODYSSEY</h3>
+              <div class="project-role-badge">CREATIVE TECHNOLOGIST &amp; SHADER DEV</div>
+
+              <p class="project-description">
+                Real-time GPU terrain synthesizer executing Marching Cubes algorithm inside compute buffers. Features asynchronous chunk streaming, simplex-noise biomes, and procedural level layouts.
+              </p>
+
+              <div class="project-stack">
+                <span class="tag">HLSL</span>
+                <span class="tag">Compute Shaders</span>
+                <span class="tag">Procedural Gen</span>
+                <span class="tag">Unity URP</span>
+                <span class="tag">Math</span>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn--primary btn-project-details" data-project="odyssey">
+                  <span>INSPECT PIPELINE</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <a href="https://github.com/amarque1/webPersonal" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" aria-label="View source repository">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>SOURCE</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05. CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact" class="section contact-section" aria-label="Contact Information">
+      <div class="container">
+        <div class="contact-card reveal-on-scroll">
+          <div class="section-eyebrow">05. TRANSMISSION</div>
+          
+          <h2 class="contact-headline">
+            HAVE A PROJECT IN MIND?<br>
+            <span style="color:var(--accent-lime);">LET'S BUILD SOMETHING.</span>
+          </h2>
+
+          <p class="contact-text">
+            I am currently open to full-time studio roles, technical art collaborations, and indie game development opportunities. Whether you need gameplay systems built from scratch or 3D visual direction, let's connect.
+          </p>
+
+          <!-- Action bar with mailto and interactive clipboard copy -->
+          <div class="contact-action-bar">
+            <a href="mailto:developer@example.com?subject=Game%20Dev%20Opportunity" class="btn btn--primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>SEND AN EMAIL</span>
+            </a>
+
+            <!-- Copy Email Wrap -->
+            <div class="email-copy-wrap">
+              <span class="email-address-text">developer@example.com</span>
+              <button type="button" class="btn btn--ghost btn-copy-email" data-copy-text="developer@example.com" aria-label="Copy email address to clipboard">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-label">COPY</span>
+              </button>
+            </div>
+
+            <!-- Download CV -->
+            <a href="./assets/cv/cv-placeholder.pdf" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>DOWNLOAD CV (PDF)</span>
+            </a>
+          </div>
+
+          <!-- Social Links Cards Grid -->
+          <div class="contact-links-grid">
+            <!-- GitHub -->
+            <a href="https://github.com/amarque1" target="_blank" rel="noopener noreferrer" class="social-link-card">
+              <div class="social-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <div class="social-meta">
+                <h4>GITHUB</h4>
+                <p>@amarque1</p>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link-card">
+              <div class="social-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 1 0 0-3.05 1.53 1.53 0 0 0 0 3.05m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                </svg>
+              </div>
+              <div class="social-meta">
+                <h4>LINKEDIN</h4>
+                <p>Professional Network</p>
+              </div>
+            </a>
+
+            <!-- itch.io -->
+            <a href="https://itch.io" target="_blank" rel="noopener noreferrer" class="social-link-card">
+              <div class="social-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M2.667 3.5A2.667 2.667 0 0 0 0 6.167v1.166C0 8.81 1.258 10 2.75 10c1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.558 0 2.75-1.258 2.75-2.75 0 1.492 1.192 2.75 2.75 2.75 1.492 0 2.75-1.19 2.75-2.667V6.167A2.667 2.667 0 0 0 21.333 3.5H2.667z"/>
+                </svg>
+              </div>
+              <div class="social-meta">
+                <h4>ITCH.IO</h4>
+                <p>Playable Game Demos</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-content">
+      <div>
+        <span>&copy; <span class="footer-year">2026</span> CREATIVE DEVELOPER &amp; GAME ARTIST.</span>
+        <span style="display:inline-block; margin-left:0.5rem; color:var(--text-muted);">ALL RIGHTS RESERVED.</span>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:1.5rem;">
+        <span style="color:var(--accent-lime); font-size:0.75rem;">HOSTED ON GITHUB PAGES</span>
+        <a href="#hero" class="footer-back-to-top" aria-label="Return to top of page">
+          <span>TOP</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT DETAIL EXPANSION MODAL
+       ========================================================================== -->
+  <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="project-modal-backdrop" aria-hidden="true"></div>
+    <div class="project-modal-content">
+      <button type="button" class="project-modal-close" aria-label="Close project blueprint modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <span class="tag tag--accent modal-tag">CATEGORY</span>
+        <h3 id="modal-project-title" class="modal-title">PROJECT TITLE</h3>
+        <p class="modal-role" style="font-family:var(--font-mono); font-size:0.85rem; color:var(--accent-lime);"></p>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section" style="margin-top:0; padding-top:0; border-top:none;">
+          <h4 class="modal-section-title">// PROJECT OVERVIEW</h4>
+          <p class="modal-section-text modal-overview"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title">// ARCHITECTURE &amp; TECHNICAL DESIGN</h4>
+          <p class="modal-section-text modal-architecture"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title">// CHALLENGES &amp; SOLUTIONS</h4>
+          <p class="modal-section-text modal-challenges"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title">// CONTROLS &amp; INTERFACE</h4>
+          <p class="modal-section-text modal-controls" style="font-family:var(--font-mono); font-size:0.85rem; color:var(--text-primary);"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-lime);" aria-hidden="true">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span class="toast-text">Notification message</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/particles.js"></script>
+  <script src="./js/interactions.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

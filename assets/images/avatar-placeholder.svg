@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="avatar-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11141c" />
+      <stop offset="100%" stop-color="#07090d" />
+    </linearGradient>
+    <radialGradient id="avatar-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5FF3D" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#C5FF3D" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect width="200" height="200" rx="16" fill="url(#avatar-grad)" stroke="#232938" stroke-width="2" />
+  <circle cx="100" cy="100" r="85" fill="url(#avatar-glow)" />
+
+  <!-- Outer HUD Ring -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#2a3245" stroke-width="1.5" stroke-dasharray="4 6" />
+  <circle cx="100" cy="100" r="58" fill="none" stroke="#C5FF3D" stroke-width="1.5" stroke-opacity="0.7" />
+
+  <!-- Monogram Glyph (Creative Technologist / Dual Core) -->
+  <path d="M 75 130 L 100 65 L 125 130" fill="none" stroke="#F1F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="84" y1="110" x2="116" y2="110" stroke="#C5FF3D" stroke-width="2.5" />
+  <circle cx="100" cy="65" r="4" fill="#C5FF3D" />
+
+  <!-- Corner Brackets -->
+  <path d="M 12 28 L 12 12 L 28 12" fill="none" stroke="#C5FF3D" stroke-width="2" />
+  <path d="M 188 28 L 188 12 L 172 12" fill="none" stroke="#00F0FF" stroke-width="2" />
+  <path d="M 12 172 L 12 188 L 28 188" fill="none" stroke="#8B5CF6" stroke-width="2" />
+  <path d="M 188 172 L 188 188 L 172 188" fill="none" stroke="#C5FF3D" stroke-width="2" />
+</svg>
